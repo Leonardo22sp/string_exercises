@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Strings - JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .exercicio {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .resultado {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercícios de Manipulação de Strings</h1>
+
+        <div class="exercicio">
+            <h3>1. Contagem de Caracteres</h3>
+            <div id="resultado1" class="resultado"></div>
+        </div>
+
+        <div class="exercicio">
+            <h3>2. Conversão para Maiúsculas</h3>
+            <div id="resultado2" class="resultado"></div>
+        </div>
+
+        <div class="exercicio">
+            <h3>3. Substituição de Nome</h3>
+            <div id="resultado3" class="resultado"></div>
+        </div>
+
+        <div class="exercicio">
+            <h3>4. Verificação de Palavra</h3>
+            <div id="resultado4" class="resultado"></div>
+        </div>
+
+        <div class="exercicio">
+            <h3>5. Extração de Substring</h3>
+            <div id="resultado5" class="resultado"></div>
+        </div>
+
+        <div class="exercicio">
+            <h3>6. Verificação de Senha</h3>
+            <div id="resultado6" class="resultado"></div>
+        </div>
+
+        <div class="exercicio">
+            <h3>7. Busca de Palavra</h3>
+            <div id="resultado7" class="resultado"></div>
+        </div>
+    </div>
+
+    <script>
+        // Exercício 1
+        let frase = "Aprender JavaScript é divertido!";
+        document.getElementById('resultado1').textContent = 
+            `Frase: "${frase}" | Número de caracteres: ${frase.length}`;
+
+        // Exercício 2
+        let texto = "JavaScript é incrível";
+        document.getElementById('resultado2').textContent = 
+            `Original: "${texto}" | Maiúsculas: "${texto.toUpperCase()}"`;
+
+        // Exercício 3
+        let nome = "Ana Clara";
+        document.getElementById('resultado3').textContent = 
+            `Original: "${nome}" | Modificado: "${nome.replace("Ana", "Maria")}"`;
+
+        // Exercício 4
+        let frase2 = "Eu gosto de programar";
+        document.getElementById('resultado4').textContent = 
+            `Frase: "${frase2}" | Contém "gosto"? ${frase2.includes("gosto")}`;
+
+        // Exercício 5
+        let palavra = "computador";
+        document.getElementById('resultado5').textContent = 
+            `Palavra: "${palavra}" | Substring(2,5): "${palavra.substring(2, 5)}"`;
+
+        // Exercício 6
+        let senha = "JavaScript123";
+        document.getElementById('resultado6').textContent = 
+            `Senha: "${senha}" | Resultado: ${senha.length >= 8 ? "Senha válida" : "Senha inválida"}`;
+
+        // Exercício 7
+        let texto2 = "Eu amo programar em JavaScript";
+        document.getElementById('resultado7').textContent = 
+            `Texto: "${texto2}" | Resultado: ${texto2.includes("JavaScript") ? "Palavra encontrada" : "Palavra não encontrada"}`;
+    </script>
+</body>
+</html>
